@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/txt_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16.dp"
+            android:layout_marginBottom="16.dp"
+            android:background="#673AB7"
+            android:text="SRKI RECRUITMENT APP"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_heading"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="Enter Name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/edt_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_name"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="Enter Phone"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_phone"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="Enter Email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/edt_aadhar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_email"
+            android:ems="10"
+            android:hint="Enter Aadhar No."
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/txt_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_aadhar"
+            android:text="Gender:"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rdg_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_gender"
+            android:layout_centerInParent="false"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="false"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdb_male"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/rdb_female"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Female" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txt_otheractivities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rdg_gender"
+            android:text="Other activities:"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/main2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_otheractivities"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/chk_ncc"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:text="NCC" />
+
+            <CheckBox
+                android:id="@+id/chk_nss"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:text="NSS" />
+
+            <CheckBox
+                android:id="@+id/chk_sports"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sports" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_qualification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main2"
+            android:text="Highest Qualification:"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/ddl_qualification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_qualification" />
+
+        <TextView
+            android:id="@+id/txt_department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ddl_qualification"
+            android:text="Department:"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/ddl_department"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_department" />
+
+        <LinearLayout
+            android:id="@+id/main3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ddl_department"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="fn_submit"
+                android:text="Submit" />
+
+            <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Clear" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_outputHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main3"
+            android:text="Output Here:"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_outputHeading"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

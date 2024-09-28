@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/op_skill"
+        android:title="Skill" />
+    <item
+        android:id="@+id/op_about"
+        android:title="About SRKI" />
+    <item
+        android:id="@+id/op_logout"
+        android:title="Logout" />
+</menu>
